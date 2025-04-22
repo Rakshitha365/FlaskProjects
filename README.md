@@ -2,9 +2,9 @@
 Repo consists of Flask basics and some projects
 
 // Requirements for Flask
-- **Pyhton 3**
-- **VS Code**
-- **Virtual Environment** - to avoid installing flask globally which protects from any disturbances in different versions of technologies(here flask and python)
+1. **Pyhton 3**
+2. **VS Code**
+3. **Virtual Environment** - to avoid installing flask globally which protects from any disturbances in different versions of technologies(here flask and python)
 
 
 
@@ -17,6 +17,7 @@ Repo consists of Flask basics and some projects
 
 
 // Install Flask
+
 pip install flask
 
 
