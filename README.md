@@ -18,7 +18,14 @@ Repo consists of Flask basics and some projects
 
 // Install Flask
 
-pip install flask
+command : pip install flask
 
 
 // Default Flask app Runs at http://127.0.0.1:5000
+
+
+// static folder is at FlaskProjects\static
+
+files in static folder are downloaded with http://127.0.0.1:5000/static/file_name (e.g: file_name = felix.webp)
+
+files can be also rendered using http://127.0.0.1:5000/static/file_name (e.g: file_name = test.txt)
