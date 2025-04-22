@@ -28,4 +28,9 @@ command : pip install flask
 
 files in static folder are downloaded with http://127.0.0.1:5000/static/file_name (e.g: file_name = felix.webp)
 
-files can be also rendered using http://127.0.0.1:5000/static/file_name (e.g: file_name = test.txt)
+files can also be rendered using http://127.0.0.1:5000/static/file_name (e.g: file_name = test.txt)
+
+// templates folder is at FlaskProjects\templates
+
+One can render templates at route endpoints by placing html files in templates folder.
+Render templates/file.html by returning render_template('file.html')

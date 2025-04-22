@@ -1,10 +1,14 @@
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route("/") # route is to navigate to endpoints like /, /products
 def hello_world():
     return "Hello, World!"
+
+@app.route("/sample")
+def sample():
+    return render_template('test.html')
 
 @app.route("/products")
 def products():
