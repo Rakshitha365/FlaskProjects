@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
@@ -40,6 +40,30 @@ def products():
     allTodo = Todo.query.all()
     print(allTodo)
     return "This is products page"
+
+@app.route("/update/<int:sno>", methods=['GET', 'POST'])
+def update(sno):
+    if request.method == "POST":
+        todo_title = request.form["title"]
+        todo_desc = request.form["desc"]
+        update_todo = Todo.query.filter_by(sno=sno).first()
+        update_todo.title = todo_title
+        update_todo.desc = todo_desc
+        db.session.add(update_todo)
+        db.session.commit()
+        return redirect("/")
+
+    fetch_todo = Todo.query.filter_by(sno=sno).first()
+    return render_template('update.html', todo = fetch_todo)
+
+@app.route("/delete/<int:sno>")
+def delete(sno):
+    delete_todo = Todo.query.filter_by(sno = sno).first()
+    db.session.delete(delete_todo)
+    db.session.commit()
+    return redirect("/")
+
+
 
 if __name__=="__main__":
     app.run(debug = True, port = 4000) # app will run automaticall upon saving chnages in script with debug = True # port will change the original port 5000 to desired one
