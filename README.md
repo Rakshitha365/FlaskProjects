@@ -1,5 +1,5 @@
 # FlaskProjects
-Repo consists of Flask basics with a simple to do list project
+Repo consists of Flask basics with simple projects
 
 
 
@@ -53,6 +53,14 @@ Render templates/file.html by returning render_template('file.html')
 
 
 
+**// Number Guessing**
+
+send a randomly generated number and guess of user to template
+
+if guess > generated number or guess < generated number return an alert specifying guess should be smaller or larger 
+
+if guess == generated number print a success message
+
 
 **// To Do list** 
 
@@ -67,3 +75,4 @@ To store the todo tasks we use flask-sqlalchemy
     2. from minimal_app import db, app
     3. with app.app_context():
         db.create_all() // ensures that db.create_all() is called only when app is running
+
